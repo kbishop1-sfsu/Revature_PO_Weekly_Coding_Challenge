@@ -1,0 +1,26 @@
+public class MyClass {
+    public static String atbash(String str){
+        StringBuffer string = new StringBuffer(str);
+        for(int i = 0; i < str.length(); i++){
+            char ch = string.charAt(i);
+            int val = (int) ch;
+            if(val >= 65 && val <= 90){
+                ch = (char) (-val + 155);
+            }
+            if(val >= 97 && val <= 122){
+                ch = (char) (-val + 219);
+            }
+            string.replace(i, i+1, Character.toString(ch));
+        }
+        return string.toString();
+    }
+    public static void main(String args[]) {
+      String str1 = "apple";
+      String str2 = "Hello world!";
+      String str3 = "Christmas is the 25th of December";
+      System.out.println(atbash(str1));
+      System.out.println(atbash(str2));
+      System.out.println(atbash(str3));
+      
+    }
+}
