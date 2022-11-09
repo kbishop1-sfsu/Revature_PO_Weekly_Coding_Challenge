@@ -1,0 +1,23 @@
+public class MyClass {
+    public static int getDigitSum(int num){
+        if(num < 10){
+            return num;
+        }else{
+            return num%10 + getDigitSum(num/10);
+        }
+    }
+    
+    public static boolean isHarshad(int num){
+        return num % getDigitSum(num) == 0;
+    }
+    
+    public static void main(String args[]) {
+      System.out.println(isHarshad(75));
+      System.out.println(isHarshad(171));
+      System.out.println(isHarshad(481));
+      System.out.println(isHarshad(89));
+      System.out.println(isHarshad(516));
+      System.out.println(isHarshad(200));
+      
+    }
+}
