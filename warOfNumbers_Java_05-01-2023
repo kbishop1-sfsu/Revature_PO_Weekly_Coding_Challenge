@@ -1,0 +1,30 @@
+import java.lang.Math;
+public class MyClass {
+    public static void main(String args[]) {
+      int [] arr1 = {2, 8, 7, 5};
+      int [] arr2 = {12, 90, 75};
+      int [] arr3 = {5, 9, 45, 6, 2, 7, 34, 8, 6, 90, 5, 243};
+
+      System.out.println(warOfNumbers(arr1));
+      System.out.println(warOfNumbers(arr2));
+      System.out.println(warOfNumbers(arr3));
+    }
+    /*
+    Create a function that takes an array of integers, 
+    sums the even and odd numbers separately, 
+    then returns the difference between the sum of the even and odd numbers.
+    */
+    
+    public static int warOfNumbers(int [] array){
+        int sumEven = 0;
+        int sumOdd = 0;
+        for(int i = 0; i < array.length; i++){
+            if(array[i]%2==0){
+                sumEven+=array[i];
+            }else{
+                sumOdd+=array[i];
+            }
+        }
+        return Math.abs(sumEven - sumOdd);
+    }
+}
