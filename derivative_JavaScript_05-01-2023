@@ -1,0 +1,9 @@
+function derivative(b, m){
+	let y = b*(m**(b-1));
+  return y;
+
+}
+
+console.log(derivative(1, 4));
+console.log(derivative(3, -2));
+console.log(derivative(4, -3));
